@@ -1,0 +1,29 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abobandit/cssss.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abobandit/cssss/issues"
+  },
+  "homepage": "https://github.com/abobandit/cssss#readme",
+  "devDependencies": {
+    "clean-css": "^5.3.3"
+  },
+  "dependencies": {
+    "clean-css-cli": "^5.6.3",
+    "uncss": "^0.17.3"
+  }
+}
