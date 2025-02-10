@@ -7,7 +7,6 @@ export const aFetchInstance = axios.create({
 export const aFetch = async (url) => {
   try {
     const response = await aFetchInstance.get(url)
-    console.log(response)
     return response.data.data ?? response.data
   } catch (e) {
     console.log(e)
@@ -16,7 +15,6 @@ export const aFetch = async (url) => {
 export const aFetchPut = async (url) => {
   try {
     const response = await aFetchInstance.put(url)
-    console.log(response)
     return response.data.data ?? response.data
   } catch (e) {
     console.log(e)
@@ -25,7 +23,6 @@ export const aFetchPut = async (url) => {
 export const aFetchPatch = async (url) => {
   try {
     const response = await aFetchInstance.patch(url)
-    console.log(response)
     return response.data.data ?? response.data
   } catch (e) {
     console.log(e)
@@ -34,7 +31,6 @@ export const aFetchPatch = async (url) => {
 export const aFetchDelete = async (url) => {
   try {
     const response = await aFetchInstance.delete(url)
-    console.log(response)
     return response.data.data ?? response.data
   } catch (e) {
     console.log(e)

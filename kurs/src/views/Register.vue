@@ -67,11 +67,17 @@ const error = ref("");
 const router = useRouter();
 
 const handleRegister = async () => {
-  try {
-    await aFetchPost("register", { name: name.value, email: email.value, password: password.value });
-    await router.push("/login"); // Перенаправляем на страницу входа
-  } catch (err) {
-    error.value = err.response?.data?.message || "Не удалось зарегистрироваться";
-  }
+    const data = await aFetchPost("register", {
+      name: name.value, email: email.value, password: password.value
+    });
+    if (data.response?.data?.password){
+      error.value = "пароль должен содержать минимум 4 символа"
+    } else if ( data.response?.data?.email){
+      error.value = "эта почта уже используется";
+    } else{
+      await router.push("/login"); // Перенаправляем на страницу входа
+
+    }
+
 };
 </script>

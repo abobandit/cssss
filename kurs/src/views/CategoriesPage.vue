@@ -42,7 +42,6 @@ const router = useRouter()
 const fetchCategories = async () => {
   try {
     const response = await aFetch('categories');
-    console.log(response)
     categories.value = response;
   } catch (error) {
     console.error('Ошибка при загрузке категорий:', error);

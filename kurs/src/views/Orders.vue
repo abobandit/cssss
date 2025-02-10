@@ -57,7 +57,6 @@ const fetchOrders = async () => {
     if (!user){
       const response = await aFetch('customer/' + localStorage.getItem('customer'));
       localStorage.setItem('customerItem', JSON.stringify(response))
-      console.log( JSON.stringify(response))
       orders.value = await aFetch('orders/' + response.email);
     }else {
       orders.value = await aFetch('orders/' + (JSON.parse(user)).email);
@@ -75,7 +74,6 @@ const cancelOrder = async (orderId) => {
       console.error('Ошибка при отмене заказа:', error);
       return
     }
-    console.log(response)
     await fetchOrders(); // Обновить список заказов
   } catch (error) {
     console.error('Ошибка при отмене заказа:', error);

@@ -26,7 +26,7 @@ const logout = async () =>{
 <template>
   <el-page-header  :icon="ArrowLeft">
     <template #content>
-      <div class="w-[100rem] flex p-6 align-mid justify-between items-center">
+      <div class="w-max flex p-6 align-mid justify-between items-center">
         <div>
           <RouterLink to="/"><span class="text-large font-600 mr-3"> Все товары</span></RouterLink>
           <RouterLink to="/categories"><span class="text-large font-600 mr-3"> Категории </span></RouterLink>

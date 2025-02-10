@@ -6,7 +6,6 @@ const products = ref([])
 
 onMounted(async()=>{
   products.value = await aFetch('products')
-  console.log(products.value)
 })
 </script>
 
